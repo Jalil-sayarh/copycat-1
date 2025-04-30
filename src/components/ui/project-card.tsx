@@ -15,9 +15,9 @@ interface ProjectCardProps {
 
 export function ProjectCard({ title, description, image, href, className }: ProjectCardProps) {
   return (
-    <Link href={href} className={cn("group block", className)}>
-      <div className="overflow-hidden">
-        <AspectRatio ratio={4/3} className="bg-muted relative overflow-hidden">
+    <Link href={href} className={cn("group block h-full", className)}>
+      <div className="overflow-hidden h-full">
+        <AspectRatio ratio={4/3} className="bg-muted relative overflow-hidden h-full">
           {image ? (
             <Image
               src={image}

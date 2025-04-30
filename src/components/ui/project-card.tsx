@@ -59,13 +59,15 @@ export function FeaturedProjectCard({
       <AspectRatio ratio={4/3}>
         <div className="relative w-full h-full bg-muted overflow-hidden">
           {image ? (
-            <Image
-              src={image}
-              alt={title}
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover transition-transform duration-500 ease-out group-hover:scale-90"
-            />
+            <div className="absolute inset-[-2.5%] scale-105">
+              <Image
+                src={image}
+                alt={title}
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover transition-transform duration-500 ease-out group-hover:scale-95"
+              />
+            </div>
           ) : (
             <div className="absolute inset-0 bg-muted" />
           )}

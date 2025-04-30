@@ -53,16 +53,47 @@ export function FeaturedProjects({ className }: FeaturedProjectsProps) {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {featuredProjects.map((project) => (
-            <FeaturedProjectCard
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              href={project.href}
-            />
-          ))}
+        <div className="flex flex-col gap-6 md:gap-8">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+            <div className="w-full md:w-[70%]">
+              <FeaturedProjectCard
+                key={featuredProjects[0].id}
+                title={featuredProjects[0].title}
+                description={featuredProjects[0].description}
+                image={featuredProjects[0].image}
+                href={featuredProjects[0].href}
+              />
+            </div>
+            <div className="w-full md:w-[30%]">
+              <FeaturedProjectCard
+                key={featuredProjects[1].id}
+                title={featuredProjects[1].title}
+                description={featuredProjects[1].description}
+                image={featuredProjects[1].image}
+                href={featuredProjects[1].href}
+              />
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+            <div className="w-full md:w-[30%]">
+              <FeaturedProjectCard
+                key={featuredProjects[2].id}
+                title={featuredProjects[2].title}
+                description={featuredProjects[2].description}
+                image={featuredProjects[2].image}
+                href={featuredProjects[2].href}
+              />
+            </div>
+            <div className="w-full md:w-[70%]">
+              <FeaturedProjectCard
+                key={featuredProjects[3].id}
+                title={featuredProjects[3].title}
+                description={featuredProjects[3].description}
+                image={featuredProjects[3].image}
+                href={featuredProjects[3].href}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

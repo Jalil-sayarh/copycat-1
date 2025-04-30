@@ -56,7 +56,7 @@ export function FeaturedProjectCard({
 }: FeaturedProjectCardProps) {
   return (
     <Link href={href} className={cn("group block w-full h-full", className)}>
-      <AspectRatio ratio={4/3} className="relative w-full h-full bg-muted overflow-hidden">
+      <AspectRatio ratio={4/3} className="relative w-full h-full bg-muted overflow-hidden [&_[data-radix-aspect-ratio-wrapper]]:!h-full">
         {image ? (
           <Image
             src={image}

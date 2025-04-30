@@ -56,28 +56,26 @@ export function FeaturedProjectCard({
 }: FeaturedProjectCardProps) {
   return (
     <Link href={href} className={cn("group block w-full h-full", className)}>
-      <div className="w-full h-full">
-        <AspectRatio ratio={4/3}>
-          <div className="relative w-full h-full bg-muted overflow-hidden">
-            {image ? (
-              <Image
-                src={image}
-                alt={title}
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-              />
-            ) : (
-              <div className="absolute inset-0 bg-muted" />
-            )}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
-            <div className="absolute inset-0 flex flex-col justify-end p-6">
-              <h3 className="text-xl md:text-2xl font-serif text-white mb-2">{title}</h3>
-              <p className="text-base text-white/80">{description}</p>
-            </div>
+      <AspectRatio ratio={4/3}>
+        <div className="relative w-full h-full bg-muted overflow-hidden">
+          {image ? (
+            <Image
+              src={image}
+              alt={title}
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+            />
+          ) : (
+            <div className="absolute inset-0 bg-muted" />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+          <div className="absolute inset-0 flex flex-col justify-end p-6">
+            <h3 className="text-xl md:text-2xl font-serif text-white mb-2">{title}</h3>
+            <p className="text-base text-white/80">{description}</p>
           </div>
-        </AspectRatio>
-      </div>
+        </div>
+      </AspectRatio>
     </Link>
   );
 }

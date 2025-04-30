@@ -56,10 +56,10 @@ export function FeaturedProjectCard({
 }: FeaturedProjectCardProps) {
   return (
     <Link href={href} className={cn("group block h-full", className)}>
-      <div className="overflow-hidden bg-muted h-full flex flex-col">
+      <div className="relative h-full bg-muted overflow-hidden">
         <AspectRatio
           ratio={16/9}
-          className="relative overflow-hidden"
+          className="relative overflow-hidden h-full"
         >
           {image ? (
             <Image
@@ -72,12 +72,12 @@ export function FeaturedProjectCard({
           ) : (
             <div className="absolute inset-0 bg-muted" />
           )}
-          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+          <div className="absolute inset-0 flex flex-col justify-end p-6">
+            <h3 className="text-xl md:text-2xl font-serif text-white mb-2">{title}</h3>
+            <p className="text-base text-white/80">{description}</p>
+          </div>
         </AspectRatio>
-        <div className="flex flex-col flex-grow p-4">
-          <h3 className="text-xl font-serif mb-2">{title}</h3>
-          <p className="text-base text-muted-foreground">{description}</p>
-        </div>
       </div>
     </Link>
   );

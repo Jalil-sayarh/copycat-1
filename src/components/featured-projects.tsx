@@ -54,8 +54,8 @@ export function FeaturedProjects({ className }: FeaturedProjectsProps) {
         </div>
 
         <div className="flex flex-col gap-6 md:gap-8">
-          <div className="flex flex-col md:flex-row gap-6 md:gap-8">
-            <div className="w-full md:w-[70%]">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-8 min-h-[400px]">
+            <div className="w-full md:w-[60%] h-full">
               <FeaturedProjectCard
                 key={featuredProjects[0].id}
                 title={featuredProjects[0].title}
@@ -64,7 +64,7 @@ export function FeaturedProjects({ className }: FeaturedProjectsProps) {
                 href={featuredProjects[0].href}
               />
             </div>
-            <div className="w-full md:w-[30%]">
+            <div className="w-full md:w-[40%] h-full">
               <FeaturedProjectCard
                 key={featuredProjects[1].id}
                 title={featuredProjects[1].title}
@@ -74,8 +74,8 @@ export function FeaturedProjects({ className }: FeaturedProjectsProps) {
               />
             </div>
           </div>
-          <div className="flex flex-col md:flex-row gap-6 md:gap-8">
-            <div className="w-full md:w-[30%]">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-8 min-h-[400px]">
+            <div className="w-full md:w-[40%] h-full">
               <FeaturedProjectCard
                 key={featuredProjects[2].id}
                 title={featuredProjects[2].title}
@@ -84,7 +84,7 @@ export function FeaturedProjects({ className }: FeaturedProjectsProps) {
                 href={featuredProjects[2].href}
               />
             </div>
-            <div className="w-full md:w-[70%]">
+            <div className="w-full md:w-[60%] h-full">
               <FeaturedProjectCard
                 key={featuredProjects[3].id}
                 title={featuredProjects[3].title}

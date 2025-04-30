@@ -53,9 +53,9 @@ export function FeaturedProjects({ className }: FeaturedProjectsProps) {
           </Link>
         </div>
 
-        <div className="flex flex-col gap-6 md:gap-8">
+        <div className="flex flex-col gap-6 md:gap-8 h-full">
           {/* First row */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 h-full">
             <div className="col-span-1 md:col-span-7 h-full">
               <FeaturedProjectCard
                 key={featuredProjects[0].id}
@@ -76,7 +76,7 @@ export function FeaturedProjects({ className }: FeaturedProjectsProps) {
             </div>
           </div>
           {/* Second row */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 h-full">
             <div className="col-span-1 md:col-span-5 h-full">
               <FeaturedProjectCard
                 key={featuredProjects[2].id}

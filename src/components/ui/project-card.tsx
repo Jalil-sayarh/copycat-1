@@ -64,7 +64,7 @@ export function FeaturedProjectCard({
               alt={title}
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+              className="object-cover transition-transform duration-500 ease-in group-hover:scale-105"
             />
           ) : (
             <div className="absolute inset-0 bg-muted" />
@@ -72,7 +72,7 @@ export function FeaturedProjectCard({
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
           <div className="absolute inset-0 flex flex-col justify-end p-6">
             <h3 className="text-xl md:text-2xl font-serif text-white mb-2">{title}</h3>
-            <p className="text-base text-white/80 transition-colors duration-500 ease-out group-hover:text-white">{description}</p>
+            <p className="text-base text-white/80 transition-colors duration-500 ease-in group-hover:text-white">{description}</p>
           </div>
         </div>
       </AspectRatio>
